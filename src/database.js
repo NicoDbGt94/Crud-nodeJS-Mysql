@@ -5,7 +5,7 @@ const pool = createPool({
   port: 3306,
   user: "root",
   password: "",
-  database: "crud_node_mysql2",
+  database: "crud_node_mysql",
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
