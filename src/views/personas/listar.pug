@@ -1,33 +1,33 @@
-extends layout.pug
+extends ../layout.pug
 block Body
-.container
-  .row.mt-5
-  if personas 
-    .col-md-3 
-      table.text-center 
-        thead
-          tr.table-dark 
-            th Nombre 
-            th Apellido 
-            th Edad
-            th Acciones 
-        tbody
-          each p in personas
-            tr 
-              td=p.nombre
-              td=p.apellido
-              td=p.edad 
-              td
-                a.btn.btn-success(href="#") Editar 
-                a.btn.btn-warning(href="#") Eliminar 
-        rfoot
-          tr.table-dark
-            td(colspan="4") REGISTRO DE PERSONAS
+  .container
+    .row.mt-5
+    if personas 
+      .col-md-3 
+        table.text-center 
+          thead
+            tr.table-dark 
+              th Nombre 
+              th Apellido 
+              th Edad
+              th Acciones 
+          tbody
+            each p in personas
+              tr 
+                td=p.nombre
+                td=p.apellido
+                td=p.edad 
+                td
+                  a.btn.btn-success(href="#") Editar 
+                  a.btn.btn-warning(href="#") Eliminar 
+          rfoot
+            tr.table-dark
+              td(colspan="4") REGISTRO DE PERSONAS
 
-  else 
-    .card.text-center.mx-auto
-      .card-header 
-        h3 Debes crear una persona
-      .card-body 
-        p Presiona este boton para crear una persona
-        a.btn.btn-primary(href="#") Ir a crear persona
+    else 
+      .card.text-center.mx-auto
+        .card-header 
+          h3 Debes crear una persona
+        .card-body 
+          p Presiona este boton para crear una persona
+          a.btn.btn-primary(href="#") Ir a crear persona
