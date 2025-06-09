@@ -1,0 +1,17 @@
+extends ../layout.pug
+block Body
+  .container.p-4
+    .card.mx-auto
+      .card-header
+        h3 Editar persona
+      .card-body
+        form(action="/edit", method="POST")
+          input.form-control(type="hidden", name="id", id="id", value=persona.id)
+          .mb-3
+            label(for="nombre") Nombre
+            input.form-control(type="text", name="nombre", id="nombre", value=persona.nombre)
+            label(for="apellido") Apellido
+            input.form-control(type="text", name="apellido", id="apellido", value=persona.apellido)
+            label(for="edad") Edad  
+            input.form-control(type="number", name="edad", id="edad", value=persona.edad)
+          button.btn.btn-success(type="submit") Editar Persona

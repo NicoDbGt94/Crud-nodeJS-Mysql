@@ -1,0 +1,16 @@
+extends ../layout.pug
+block Body
+  .container.p-4
+    .card.mx-auto
+      .card-header
+        h3 Agregar persona
+      .card-body
+        form(action="/add", method="POST")
+          .mb-3
+            label(for="nombre") Nombre
+            input.form-control(type="text", name="nombre", id="nombre")
+            label(for="apellido") Apellido
+            input.form-control(type="text", name="apellido", id="apellido")
+            label(for="edad") Edad  
+            input.form-control(type="number", name="edad", id="edad")
+          button.btn.btn-primary(type="submit") Crear
