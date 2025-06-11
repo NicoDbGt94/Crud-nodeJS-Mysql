@@ -17,8 +17,10 @@ block Body
               td=p.apellido
               td=p.edad 
               td
-                a.btn.btn-success(href="/edit/"+p.id) Editar 
-                a.btn.btn-warning(href="/delete") Eliminar 
+                a.btn.btn-success(href="/edit/"+p.id) 
+                  i(class="fa-solid fa-pen-to-square") 
+                a.btn.btn-warning.ms-1(href="/delete/"+p.id)
+                  i(class="fa-solid fa-trash")
         tfoot
           tr.table-dark
             td(colspan="4") REGISTRO DE PERSONAS

@@ -52,4 +52,14 @@ router.post("/edit", async (req,res)=>{
     res.status(500).json({message: error.message});
   }
 })
+
+router.get("/delete/:id", async (req,res)=>{
+  try{
+    const id = req.params.id;
+    await pool.query("DELETE FROM persons WHERE id = ?", [id]);
+    res.redirect("/list");
+  }catch(error){
+    res.status(500).json({message: error.message});
+  }
+})
 export default router;
